@@ -1,0 +1,44 @@
+
+h1 {
+font-family:  "Comic Sans MS";
+	font-style:oblique;
+	font-size: 40px; 	
+	max-width: 350px;
+	text-align: center;
+	border: 50px groove black;
+	letter-spacing: 10px;
+	margin:25px auto 0px;
+	border-radius: 100px;
+	line-height: 10px;
+	border-image: url(gg.png) 200 round;
+}
+h2 {
+	text-align: center;
+	font-family:  "Comic Sans MS";
+	line-height: 20px;
+	font-size: 25px;
+}
+p {
+	text-align: center;
+	font-family: sans-serif;
+}
+.box {
+	border: 40px groove #d5d4d4;
+	margin:auto;
+	background-image: url(backk.png);
+	border-radius: 100px;
+
+}
+.span1{
+	font-size:24px;
+	margin-left:650px;
+	margin-top:10px;
+	background-color: #4CAF50;
+	color:#fff;
+	border-radius: 15px;
+    box-shadow: 0 9px #999;
+    cursor: pointer;
+    height:50px;
+    width:100px;
+    text-align:center;
+}

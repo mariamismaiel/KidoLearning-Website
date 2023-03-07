@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<title>Change the Background Color with JavaScript</title>
+</head>
+<body onLoad="changeBackground()">
+<table width="90%">
+    <tr>
+        <th> <button type="button"  onclick="changeBodyBg('mint');"><img src="mint.jpg" width="200" height="200"/></button></th> 
+        <th> <button type="button"  onclick="changeBodyBg('kk');"><img src="kk.jpg" width="200" height="200"/></button></th> 
+        <th> <button type="button"  onclick="changeBodyBg('mybackground');"><img src="mybackground.jpg" width="200" height="200"/></button></th> 
+    </tr>   
+   
+    </table>
+ <script src="j.js">
+
+</script>
+</body>
+</html>
