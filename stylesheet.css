@@ -1,49 +1,48 @@
-body
-{
-background-image:url("mybackground.jpg");
-margin:10px;
-padding:10px;
+body {
+	margin 0 auto;
+	background-image: url('images/Back.jpg');
+	background-size: cover;
+	background-size: 50px;
+	background-attachment: fixed; }
+
+h1 {
+	font-family:  "Comic Sans MS";
+	font-style:oblique;
+	letter-spacing:20px; 	
+	background: #ffa5a5;
+	max-width: 650px;
+	text-align: center;
+	padding: 5px;
+	border: 5px groove #FFF;
+	margin:25px auto;
+	border-radius: 200px;
+}
+.box {
+	background-color:#f2eadc;
+	border: 70px groove #FFF;
+	border-radius: 50px;
+	border-image:url(images/border.png) 200 round;
+	margin:0 100px;
+	padding: 50px;
+}
+img {
+	max-width: 250px;
+	max-height: 250px;
+	margin-top: 20px;
+}
+.text {
+	font-family: "Comic Sans MS";
+	font-size: 25px;
+	font-weight: bold;
+	text-align: center;
+	border-radius: 50px;
+	background:#ffa5a578;
+	border: 5px groove #FFF;
+	padding-bottom: 15px;
+}
+p {
+	text-align: center;
+	font-family:sans-serif;
 }
 
-div
-{
-border-style:double;
-border-width:3px;
-border-color: #F3F5E6;
-border-radius: 50px;
-background-color:#DC8238;
-font-family:Lucida Calligraphy;
-font-size:55px;
-text-align:center;
-color:white;
-padding:20px;
-margin:50px
 
-}
-
-table,th,td
-{
-margin:70px;
-background-color:#F3F5E6;
-border-width:5px;
-border-spacing:50px;
-border-radius: 50px;
-border-color:#DC8238;
-border-style:double;
-
-}
-th
-{
-padding:1px;
-width:1px;
-border:none;
-
-}
-td
-{
-font-size:30px;
-font-family:Comic Sans MS;
-padding:30px;
-border-style:solid;
-border-width:3px;
-}
