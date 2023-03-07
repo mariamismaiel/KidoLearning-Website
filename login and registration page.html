@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+     <head>
+	     <meta charset="UTF-8">
+         <title>  Kido Learning </title>
+		 
+		 <style type="text/css">
+		 
+		   .div1
+		        {background-color:white; 
+		         color:#3d59ab;
+                 height:120px;
+				 padding-bottom:30px;
+				 padding-top:0px;
+				 border-style:solid;
+				 border-width:5px;
+				 border-color:#3d59ab;}
+				 
+	       aside{float:left;
+		         width:0px;
+		         padding: 10px 10px;
+                }
+					
+		   .h1, .h2{text-align:center;}
+		     
+		   
+		   form
+		       {visibility:hidden;
+		         color:navy;
+				 font-weight:bold;
+  		         width:200px; 
+				 background-color:rgb(61,89,171,0.2);
+				 list-style:none; 
+				 margin-bottom:10px;
+				 padding-left:10px;
+				 padding-bottom:10px; 
+				 padding-top:10px;} 
+				  
+				 
+		   .forms{margin-top:20px; margin-left:40px; } 
+		   
+		   
+		   body
+		       {background-image:url("pictures/background.jpg");
+          		   background-size:cover;
+				   background-repeat:no-repeat; 
+				   background-position:100% 80%;
+                  background-attachment:fixed}
+				   
+		  
+				 
+				   
+		   button 
+		         {background-color:#3d59ab; 
+		          color:white;
+				  font-size:20px;
+				  padding:10px 10px;
+		          border-color:#3d59ab;
+				 }
+				  
+			button:hover, #sign_in:hover, #register:hover {background-color:white;
+											    color:#3d59ab; }
+							 
+			#register, #sign_in	
+                               {background-color:#3d59ab; 
+		                        color:white;
+				                font-size:15px;
+				                padding:5px 5px;
+		                        border-color:#3d59ab;
+								margin-top:5px;
+								width:50%;
+				  			   }			
+					  
+		   
+		 </style>
+		 
+		 <script type="text/javascript">
+		 
+		 
+		 
+		 function showForm(form1,form2)
+		 {
+		    document.getElementById(form1).style.visibility="visible";
+			document.getElementById(form2).style.visibility="hidden";
+		 }
+		 
+		
+		 
+		  var valid1=false;
+		 function emailValidation()
+		 {
+		    if(document.getElementById('signup_email').value.indexOf("@")==-1||document.getElementById('signup_email').value.indexOf(".")==-1)
+		   {
+		    document.getElementById('emailSpan').innerHTML="please enter a valid email, e.g: info@yahoo.com";
+		    document.getElementById('emailSpan').style.color='red';
+			valid1=false;
+		   }
+		  
+		   else
+		   {
+		     document.getElementById('emailSpan').innerHTML="";
+			valid1=true;
+		   }
+		   
+		 }
+		 
+		 var valid2=false;
+		 function passwordValidation()
+		 {
+		    if(document.getElementById('signup_password1').value.length<6)
+			{
+			  document.getElementById('signup_passwordSpan').innerHTML="password must be at leats 6 characters";
+		      document.getElementById('signup_passwordSpan').style.color='red';
+			  valid2=false;
+              confirmPassword();
+			}
+			
+			else
+			{
+			   document.getElementById('signup_passwordSpan').innerHTML="";
+			   valid2=true;
+			   confirmPassword();
+			}
+			
+		 }
+		 
+		 var valid3=false;
+		function confirmPassword()
+		 {
+		    if(document.getElementById('signup_password2').value!=document.getElementById('signup_password1').value)
+			{
+			 document.getElementById('match').innerHTML="password doesn't match";
+			  document.getElementById('match').style.color='red';
+			  valid3=false;
+			}
+			
+			else
+			{
+			  document.getElementById('match').innerHTML="matching";
+			  document.getElementById('match').style.color='green';
+			  valid3=true;
+			}
+			
+		 }
+		 
+		 function registration()
+		 {
+		    if(valid1==true&&valid2==true&&valid3==true)
+			{
+			   alert("Registration completed! You have an account now.")
+			   document.getElementById('signup').action="../Home page/Home.html";  //HOME PAGE
+			   
+			}
+			
+			else
+			{
+			   alert("Please recheck your data!");
+			   return false;
+			}
+			
+		 }
+		 
+		 function checkAdmin()
+		 {
+		  if(document.getElementById('login_password').value.length<6)
+		  {
+		      document.getElementById('login_passwordSpan').innerHTML="Incorrect password!";
+		      document.getElementById('login_passwordSpan').style.color='red';
+			  return false;
+		  }
+		  
+		  else
+		  {
+		     document.getElementById('login_passwordSpan').innerHTML="";
+		    
+		    if(document.getElementById('login_username').value=="admin"&&document.getElementById('login_password').value=="admin1234")
+			{
+			   document.getElementById('login').action="admin.html";   //ADMIN PAGE
+			}
+			
+			else
+			{
+			    document.getElementById('login').action="../Home page/Home.html";  //HOME PAGE
+			}
+		  }
+		 }
+		
+		
+		</script>
+	  
+	  
+	  
+     </head>
+	 
+     <body>
+	 
+	  <div class="div1">
+	  
+	  <aside>
+        <img src="pictures/logo.png" width="200px" height="120px" alt="logo">
+      </aside>
+		  
+		 <h1 class="h1" style="font-size:30px"> Welcome to Kido learning</h1><br>
+		 <h2 class="h2">A simple educational website for children from 2 to 6 years old that makes learning easier and more fun.</h2><br>
+	  </div>
+	  
+	  <div class="forms">
+	  
+	   <button id="loginButton" onclick="showForm('login','signup')">Login</button>
+	
+		<form  id="login" onsubmit="return(checkAdmin())">
+		  Username:<input type="text" id="login_username" required /><br>
+		  Password:<input type="password" id="login_password" onchange="checkAdmin()" required /> 
+		  <span id="login_passwordSpan"> </span> <br>
+		  <input id="sign_in" type ="submit" value="Sign in"/>
+		</form>
+		
+		
+		<p style="font-size:20px; color:navy;"> Don't have an account?..</p>
+	    
+		
+	    <button id="signupButton" onclick="showForm('signup','login')">Sign up</button>
+		
+	    <form  id="signup" onsubmit="return(registration())">
+		  First name:<input type="text" id="fName"  required /> <br>
+		  Last name:<input type="text" id="lName"  required />  <br>
+		  username:<input type="text" id="signup_username" required />  <br>
+		  E-mail:<input type="text" id="signup_email" onchange="emailValidation()" required /> <span id="emailSpan" > </span > <br>
+		  Password:<input type="password" id="signup_password1"  onchange="passwordValidation()"  required /> 
+		  <span id="signup_passwordSpan"> </span><br>
+		  Confirm password:<input type="password" id="signup_password2" onchange="confirmPassword()" required  /> 
+		  <span id="match"> </span><br>
+		  Country:<select required> <option value="" >[choose your country]</option>
+                     <option value="1">Egypt</option>
+					 <option value="2">England</option>
+                     <option value="3">France</option>
+                     <option value="4">Germany</option>
+					 <option value="5">India</option>
+					 <option value="6">USA</option>
+                  </select>	 <br>
+		  <input id="register" type ="submit" value="Register" />
+		</form>
+		
+	
+	  </div>
+      </body>
+</html>

@@ -11,3 +11,6 @@ var a=localStorage.getItem("myimage");
 document.body.style.background= a;
 }
 
+function playAudio(x) {
+ document.getElementById(x).play();
+}
