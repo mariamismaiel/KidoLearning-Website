@@ -1,48 +1,50 @@
-body {
-	margin 0 auto;
-	background-image: url('images/Back.jpg');
-	background-size: cover;
-	background-size: 50px;
-	background-attachment: fixed; }
+body{
+	background-image: url("images/back.jpg");
+	background-size:cover;
+	
 
-h1 {
-	font-family:  "Comic Sans MS";
-	font-style:oblique;
-	letter-spacing:20px; 	
-	background: #ffa5a5;
-	max-width: 650px;
-	text-align: center;
-	padding: 5px;
-	border: 5px groove #FFF;
-	margin:25px auto;
-	border-radius: 200px;
 }
-.box {
-	background-color:#f2eadc;
-	border: 70px groove #FFF;
-	border-radius: 50px;
-	border-image:url(images/border.png) 200 round;
-	margin:0 100px;
-	padding: 50px;
+div{
+	background: rgb(255,105,180);
+	text-align:center;
+	color:#fff;
+	margin-left:250px;
+	margin-right:250px;
+	font-size: 50px;
+	font-style:italic;
+	font-weight:bold;
+	border:1px solid rgb(255,105,180);
+	border-radius:25px;
+	
 }
-img {
-	max-width: 250px;
-	max-height: 250px;
-	margin-top: 20px;
+table,th,td{
+	
+	border-spacing: 15px;
+
+	background-color:rgb(255,248,220);
+	;
+
 }
-.text {
-	font-family: "Comic Sans MS";
-	font-size: 25px;
-	font-weight: bold;
-	text-align: center;
-	border-radius: 50px;
-	background:#ffa5a578;
-	border: 5px groove #FFF;
-	padding-bottom: 15px;
-}
-p {
-	text-align: center;
-	font-family:sans-serif;
+table{
+	border:1px solid rgb(255,105,180);
+	border-radius:25px;
+	margin-top: 80px;
+	margin-left:135px;
+	margin-bottom: 80px;
+	
+
 }
 
 
+.span1{
+	border:1px solid rgb(255,105,180);
+	border-radius:25px;
+
+	height:50px;
+	font-style: italic;
+	font-size:30px;
+	font-weight:bold;
+	text-align:center;
+
+
+}
